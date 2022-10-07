@@ -5,12 +5,12 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if (x === y) {
-    return x || y;
-} else if (x > y){
+  if ( x > y){
     return x;
+} else {
+    return y;
 }
-}
+  }
 
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
@@ -45,11 +45,11 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-  if ( idioma == 'Aleman'){
+  if ( idioma === 'aleman'){
     return 'Guten Tag!'
-} else if  (idioma == 'Aleman'){
+} else if  (idioma === 'mandarin'){
     return 'Ni Hao!'
-} else if (idioma == 'Ingles'){
+} else if (idioma === 'ingles'){
     return 'Hello!'
 } else {
     return 'Hola!'
@@ -113,11 +113,7 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if( Math.floor (numero)){
-    return true;
-} else{
-    return false;
-}
+  return Math.floor (numero) %1 === 0
 }
 
 function fizzBuzz(numero) {
